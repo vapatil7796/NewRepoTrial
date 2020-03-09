@@ -6,8 +6,46 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <style>
+        /* unvisited link */
+        a:link {
+            color:burlywood;
+        }
+
+        /* visited link */
+        a:visited {
+            color: green;
+        }
+
+        /* mouse over link */
+        a:hover {
+            color: hotpink;
+        }
+
+        /* selected link */
+        a:active {
+            color: white;
+        }
+
+        /*H1 Header*/
+        h1{
+            color:cornsilk;
+            font-weight:bolder;
+        }
+
+        /* H2 Header*/
+        h2 {
+            color: sandybrown;
+            font-weight: bold;
+        }
+        
+        /* H3 Header*/
+        h3 {
+            color:aquamarine;
+        }
+    </style>
 </head>
-<body style="background-color:#0070AC">
+<body style="background-color:#0070AC;color:white;">
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -21,8 +59,8 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li align="right">@Html.ActionLink("About", "About", "Home")</li>
+                    <li align="right">@Html.ActionLink("Contact", "Contact", "Home")</li>
                 </ul>
             </div>
         </div>
@@ -31,7 +69,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - CG BMS developed by vishal-anil.patil@capgemini.com</p>
+            <p style="color:gold">&copy; @DateTime.Now.Year - CG BMS developed by vishal-anil.patil@capgemini.com</p>
         </footer>
     </div>
 
